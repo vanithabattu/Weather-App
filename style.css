@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background:#484343;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card{
+    width: 100%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #0b1d8c, #7f75d9);
+    color: #fff;
+    border-radius: 20px;
+    padding: clamp(20px, 5vw, 40px);
+    text-align: center;
+}
+
+/* SEARCH BAR */
+.search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: clamp(8px, 2vw, 12px);
+}
+
+.search input{
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    outline: 0;
+    background: #dee6e4;
+    color: #090909;
+    padding: clamp(8px, 2vw, 12px) clamp(16px, 4vw, 20px);
+    height: clamp(40px, 6vw, 55px);
+    border-radius: 30px;
+    font-size: clamp(14px, 2.5vw, 18px);
+}
+
+.search button{
+    flex-shrink: 0;
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: clamp(40px, 8vw, 55px);
+    height: clamp(40px, 8vw, 55px);
+    cursor: pointer;
+}
+
+.search button img{
+    width: clamp(20px, 5vw, 28px);
+}
+
+/* WEATHER INFO */
+.weather{
+    margin-top: clamp(15px, 4vw, 25px);
+}
+
+.weather-icon{
+    width: clamp(60px, 15vw, 80px);
+    height: clamp(60px, 15vw, 80px);
+}
+
+.weather h1.temp{
+    font-size: clamp(32px, 8vw, 48px);
+    margin: clamp(5px, 2vw, 10px) 0;
+}
+
+.weather h2.city{
+    font-size: clamp(18px, 5vw, 28px);
+    margin: clamp(3px, 1.5vw, 5px) 0;
+    word-wrap: break-word;
+}
+
+/* WEATHER DETAILS */
+.details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: clamp(20px, 5vw, 30px);
+    gap: clamp(8px, 3vw, 12px);
+}
+
+.col{
+    display: flex;
+    align-items: center;
+    width: clamp(120px, 45%, 48%);
+}
+
+.col img{
+    width: clamp(30px, 8vw, 40px);
+    margin-right: clamp(5px, 2vw, 10px);
+}
+
+.humidity, .wind{
+    margin: 0;
+}
+
+.humidity{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin-top: clamp(5px, 2vw, 10px);
+}
