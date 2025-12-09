@@ -23,7 +23,7 @@ async function checkWeather(city) {
     try {
         //await pause execution until response arrive
         //fetch() request weather data from OpenWeatherMAP api
-        
+
         const response = await fetch(apiUrl + city + `&appid=${apikey}`);
         //response.json converts the raw responce into json format
         const data = await response.json();
@@ -93,18 +93,22 @@ function getLocationWeather() {
     }
 }
 
-function showPosition(position) {
+
+async function showPosition(position) {
     //Extracts latitude and longitude from geolocation API
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
 
-    //Fetches weather data using coordinates instead of city name. 
-
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apikey}`)
-        .then(response => response.json())
-        .then(data => updateWeatherCard(data))
-        .catch(err => console.error("Error fetching weather:", err));
+    try {
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apikey}`);
+        const data = await response.json();
+        updateWeatherCard(data);
+    } catch (err) {
+        console.error("Error fetching weather:", err);
+        alert("Failed to fetch weather for your location.");
+    }
 }
+
 
 function showError() {
     alert("Please allow location access to get current weather.");
