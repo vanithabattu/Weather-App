@@ -1,113 +1,126 @@
+/* Reset default browser styles for all elements */
 *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: 'Poppins', sans-serif; /* Set global font */
+    box-sizing: border-box; /* Include padding/border inside element width */
 }
 
+/* BODY STYLING */
 body{
-    background:#484343;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    background:#484343; /* Page background color */
+    min-height: 100vh; /* Full screen height */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    padding: 20px; /* Responsive space on smaller screens */
 }
 
+/* MAIN WEATHER CARD */
 .card{
-    width: 100%;
-    max-width: 470px;
-    background: linear-gradient(135deg, #0b1d8c, #7f75d9);
-    color: #fff;
-    border-radius: 20px;
-    padding: clamp(20px, 5vw, 40px);
-    text-align: center;
+    width: 100%; /* Full width on small screens */
+    max-width: 470px; /* Limit card width */
+    background: linear-gradient(135deg, #0b1d8c, #7f75d9); /* Gradient background */
+    color: #fff; /* Text color white */
+    border-radius: 20px; /* Rounded corners */
+    padding: clamp(20px, 5vw, 40px); /* Responsive padding */
+    text-align: center; /* Center-align text */
 }
 
-/* SEARCH BAR */
+/* SEARCH BAR CONTAINER */
 .search{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: clamp(8px, 2vw, 12px);
+    width: 100%; /* Take full card width */
+    display: flex; /* Place input & button in one row */
+    align-items: center; /* Vertically center items */
+    gap: clamp(8px, 2vw, 12px); /* Responsive spacing */
 }
 
+/* SEARCH INPUT FIELD */
 .search input{
-    flex: 1;
-    min-width: 0;
-    border: 0;
-    outline: 0;
-    background: #dee6e4;
-    color: #090909;
-    padding: clamp(8px, 2vw, 12px) clamp(16px, 4vw, 20px);
-    height: clamp(40px, 6vw, 55px);
-    border-radius: 30px;
-    font-size: clamp(14px, 2.5vw, 18px);
+    flex: 1; /* Input takes remaining space */
+    min-width: 0; /* Prevent overflow on small screens */
+    border: 0; /* Remove default border */
+    outline: 0; /* Remove outline on click */
+    background: #dee6e4; /* Light background color */
+    color: #090909; /* Dark text color */
+    padding: clamp(8px, 2vw, 12px) clamp(16px, 4vw, 20px); /* Responsive padding */
+    height: clamp(40px, 6vw, 55px); /* Responsive height */
+    border-radius: 30px; /* Rounded pill shape */
+    font-size: clamp(14px, 2.5vw, 18px); /* Responsive font size */
 }
 
+/* SEARCH BUTTON */
 .search button{
-    flex-shrink: 0;
-    border: 0;
-    outline: 0;
-    background: #ebfffc;
-    border-radius: 50%;
-    width: clamp(40px, 8vw, 55px);
-    height: clamp(40px, 8vw, 55px);
-    cursor: pointer;
+    flex-shrink: 0; /* Prevent button squeezing */
+    border: 0; /* Remove border */
+    outline: 0; /* Remove outline */
+    background: #ebfffc; /* Light button background */
+    border-radius: 50%; /* Circular button */
+    width: clamp(40px, 8vw, 55px); /* Responsive width */
+    height: clamp(40px, 8vw, 55px); /* Responsive height */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
+/* SEARCH ICON INSIDE BUTTON */
 .search button img{
-    width: clamp(20px, 5vw, 28px);
+    width: clamp(20px, 5vw, 28px); /* Responsive icon size */
 }
 
-/* WEATHER INFO */
+/* WEATHER INFO SECTION */
 .weather{
-    margin-top: clamp(15px, 4vw, 25px);
+    margin-top: clamp(15px, 4vw, 25px); /* Space above weather section */
 }
 
+/* MAIN WEATHER ICON */
 .weather-icon{
-    width: clamp(60px, 15vw, 80px);
-    height: clamp(60px, 15vw, 80px);
+    width: clamp(60px, 15vw, 80px); /* Responsive icon width */
+    height: clamp(60px, 15vw, 80px); /* Responsive icon height */
 }
 
+/* TEMPERATURE TEXT */
 .weather h1.temp{
-    font-size: clamp(32px, 8vw, 48px);
-    margin: clamp(5px, 2vw, 10px) 0;
+    font-size: clamp(32px, 8vw, 48px); /* Big temp font */
+    margin: clamp(5px, 2vw, 10px) 0; /* Space around temp */
 }
 
+/* CITY NAME TEXT */
 .weather h2.city{
-    font-size: clamp(18px, 5vw, 28px);
-    margin: clamp(3px, 1.5vw, 5px) 0;
-    word-wrap: break-word;
+    font-size: clamp(18px, 5vw, 28px); /* City name font */
+    margin: clamp(3px, 1.5vw, 5px) 0; /* Space around city name */
+    word-wrap: break-word; /* Prevent text overflow */
 }
 
-/* WEATHER DETAILS */
+/* DETAILS SECTION (Humidity + Wind) */
 .details{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: clamp(20px, 5vw, 30px);
-    gap: clamp(8px, 3vw, 12px);
+    display: flex; /* Place items side-by-side */
+    flex-wrap: wrap; /* Allow items to wrap on small screens */
+    justify-content: space-between; /* Spread items evenly */
+    margin-top: clamp(20px, 5vw, 30px); /* Space above details */
+    gap: clamp(8px, 3vw, 12px); /* Spacing between columns */
 }
 
+/* INDIVIDUAL DETAIL COLUMN */
 .col{
-    display: flex;
-    align-items: center;
-    width: clamp(120px, 45%, 48%);
+    display: flex; /* Align icon + text horizontally */
+    align-items: center; /* Vertically center items */
+    width: clamp(120px, 45%, 48%); /* Responsive width for two columns */
 }
 
+/* DETAIL ICON (Humidity/Wind) */
 .col img{
-    width: clamp(30px, 8vw, 40px);
-    margin-right: clamp(5px, 2vw, 10px);
+    width: clamp(30px, 8vw, 40px); /* Responsive size */
+    margin-right: clamp(5px, 2vw, 10px); /* Gap between icon and text */
 }
 
+/* Remove extra margin from text */
 .humidity, .wind{
     margin: 0;
 }
 
+/* HUMIDITY TEXT STYLING */
 .humidity{
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    margin-top: clamp(5px, 2vw, 10px);
+    width: 100%; /* Full width */
+    justify-content: center; /* Center align number */
+    display: flex; /* Center using flexbox */
+    margin-top: clamp(5px, 2vw, 10px); /* Spacing above */
 }

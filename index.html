@@ -1,48 +1,55 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
-    <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes page responsive on mobile -->
+    <title>Weather App</title> <!-- Title shown in browser tab -->
+
+    <link rel="stylesheet" href="style.css"/> <!-- Link to external CSS file -->
 </head>
+
 <body>
-    <div class="card"> 
-        <!-- SEARCH BAR -->
-        <div class="search"> 
-            <input type="text" placeholder="Enter city name" spellcheck="false">
-            <button>
-                <img src="search.png" alt="Search">
+    <div class="card"> <!-- Main container box -->
+
+        <!-- SEARCH BAR SECTION -->
+        <div class="search">
+            <input type="text" placeholder="Enter city name" spellcheck="false"> <!-- User enters city name -->
+            <button> <!-- Search button -->
+                <img src="search.png" alt="Search"> <!-- Search icon image -->
             </button>
         </div>
 
-        <!-- WEATHER INFO -->
-        <div class="weather"> 
-            <img src="default.png" class="weather-icon" alt="Weather Icon">
-            <h1 class="temp"></h1>
-            <h2 class="city"></h2>   
+        <!-- WEATHER DISPLAY SECTION -->
+        <div class="weather">
+            <img src="default.png" class="weather-icon" alt="Weather Icon"> <!-- Dynamic weather icon -->
+            <h1 class="temp"></h1> <!-- Temperature will be inserted by JS -->
+            <h2 class="city"></h2> <!-- City name will be inserted by JS -->
         </div>
 
-        <!-- WEATHER DETAILS -->
+        <!-- EXTRA WEATHER DETAILS (Humidity & Wind) -->
         <div class="details">
+
+            <!-- HUMIDITY COLUMN -->
             <div class="col">
-                <img src="humidity.png" alt="Humidity">
+                <img src="humidity.png" alt="Humidity"> <!-- Humidity icon -->
                 <div>
-                    <p class="humidity"></p>
-                    <p>Humidity</p>
+                    <p class="humidity"></p> <!-- Humidity value from JS -->
+                    <p>Humidity</p> <!-- Static label -->
                 </div>
             </div>
 
+            <!-- WIND SPEED COLUMN -->
             <div class="col">
-                <img src="wind.png" alt="Wind Speed">
+                <img src="wind.png" alt="Wind Speed"> <!-- Wind icon -->
                 <div>
-                    <p class="wind"> </p>
-                    <p>Wind Speed</p>
+                    <p class="wind"></p> <!-- Wind speed value from JS -->
+                    <p>Wind Speed</p> <!-- Static label -->
                 </div>
             </div>
-        </div>
-    </div>
 
-    <script src="index.js"></script>
+        </div> <!-- End details -->
+    </div> <!-- End main card -->
+
+    <script src="index.js"></script> <!-- Link to your JavaScript file -->
 </body>
 </html>

@@ -23,6 +23,7 @@ async function checkWeather(city) {
     try {
         //await pause execution until response arrive
         //fetch() request weather data from OpenWeatherMAP api
+        
         const response = await fetch(apiUrl + city + `&appid=${apikey}`);
         //response.json converts the raw responce into json format
         const data = await response.json();
