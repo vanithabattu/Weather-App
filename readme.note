@@ -1,0 +1,7 @@
+Summary of flow: 
+User types a city → checkWeather() fetches data → updates card. 
+User clicks search button or presses Enter → same flow. 
+If input is empty → fetch current location weather. 
+On page load → fetch current location weather automatically. 
+Weather icon updates dynamically based on main condition. 
+Errors (invalid city, fetch failure, or denied location) are handled gracefully.
